@@ -76,8 +76,8 @@ function openPictureBase64(base64) {
         image = new Image(),
         newTag = window.open('', '_blank')
     image.src = base64
-    newTag.document.body.style['textAlign'] = "center"
     newTag.document.body.appendChild(image)
+	setStyle(newTag.document.body, 'text-align', 'center')
 }
 
 getPicture()
